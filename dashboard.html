@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f4ed">
+  <meta name="description" content="Plan your next visit to Juniper & Stone.">
+  <title>Your table — Juniper & Stone</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dashboard-page">
+  <header class="dashboard-topbar">
+    <a class="wordmark" href="index.html#home" aria-label="Juniper and Stone home"><span class="mark">J<span>&</span>S</span><span class="wordmark-name">JUNIPER <i>&</i> STONE</span></a>
+    <nav class="dashboard-nav" aria-label="Account navigation"><a href="#menu">Menu</a><a href="#reserve">Reserve</a><a href="account.html" class="dashboard-signout">Sign out</a></nav>
+  </header>
+  <main>
+    <section class="dashboard-hero">
+      <div class="dashboard-hero-image"></div><div class="dashboard-hero-shade"></div>
+      <div class="dashboard-hero-copy"><span class="dashboard-kicker">A LITTLE SOMETHING FOR YOUR NEXT VISIT</span><h1>Your table<br><em>awaits.</em></h1><p>Take a look at the menu, then choose a time to join us.</p><a class="dashboard-hero-link" href="#reserve">Plan your visit <span>↓</span></a></div>
+      <span class="dashboard-preview">PREVIEW MODE · SIGN-IN IS NOT CONNECTED</span>
+    </section>
+
+    <section class="dashboard-booking" id="reserve">
+      <div class="dashboard-section-head"><div><span class="dashboard-kicker">MAKE AN EVENING OF IT</span><h2>Reserve a table</h2><p>Tell us when you’re coming and who’s joining you.</p></div><span class="booking-mark">01 <i>—</i> 03</span></div>
+      <div class="booking-steps"><span class="step-active"><i>1</i> Your table</span><span><i>2</i> Date & time</span><span><i>3</i> Your details</span></div>
+      <form class="reservation-form" data-reservation-form>
+        <div class="reservation-grid">
+          <label>Party size<select name="partySize" required><option value="">Choose guests</option><option>1 guest</option><option>2 guests</option><option>3 guests</option><option>4 guests</option><option>5 guests</option><option>6 guests</option><option>7 guests</option><option>8 guests</option></select></label>
+          <label>Date<input type="date" name="date" data-reservation-date required></label>
+          <label>Time<select name="time" required><option value="">Choose a time</option><option>12:00 pm</option><option>12:30 pm</option><option>1:00 pm</option><option>5:00 pm</option><option>5:30 pm</option><option>6:00 pm</option><option>6:30 pm</option><option>7:00 pm</option><option>7:30 pm</option><option>8:00 pm</option><option>8:30 pm</option><option>9:00 pm</option></select></label>
+          <label>Your name<input type="text" name="name" autocomplete="name" placeholder="Full name" required></label>
+          <label>Email address<input type="email" name="email" autocomplete="email" placeholder="you@example.com" required></label>
+          <label>Phone number <span class="optional-label">OPTIONAL</span><input type="tel" name="phone" autocomplete="tel" placeholder="(555) 000-0000"></label>
+          <label class="reservation-wide">Occasion <span class="optional-label">OPTIONAL</span><select name="occasion"><option value="">Choose an occasion</option><option>Just a lovely dinner</option><option>Birthday</option><option>Anniversary</option><option>Celebration</option><option>Other</option></select></label>
+          <label class="reservation-wide">Special requests <span class="optional-label">OPTIONAL</span><textarea name="requests" rows="3" placeholder="Dietary needs, accessibility requests, or anything else we should know"></textarea></label>
+        </div>
+        <div class="reservation-submit-row"><p>For parties of 7 or more, please call <a href="tel:+15550142024">(555) 014-2024</a>.</p><button type="submit" class="reservation-submit">Request a table <span>↗</span></button></div>
+        <p class="reservation-feedback" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="dashboard-menu" id="menu">
+      <div class="dashboard-section-head"><div><span class="dashboard-kicker">A TASTE OF THE TABLE</span><h2>Food & drinks</h2><p>Seasonal favorites from our kitchen and bar, made for sharing.</p></div><span class="menu-season">CURRENT FAVORITES</span></div>
+      <nav class="menu-jump" aria-label="Menu sections"><a href="#food">Food <span>↓</span></a><a href="#drinks">Drinks <span>↓</span></a></nav>
+      <section class="menu-group" id="food" aria-labelledby="food-title">
+        <div class="menu-group-head"><div><span class="dashboard-kicker">FROM OUR KITCHEN</span><h3 id="food-title">Food</h3></div><span>SEASONAL · MADE TO SHARE</span></div>
+        <div class="menu-category-grid">
+          <article class="menu-category"><h4>Small plates</h4>
+            <div class="menu-item"><div><b>Warm sourdough</b><p>Whipped brown butter, sea salt, a little honey</p></div><strong>$8</strong></div>
+            <div class="menu-item"><div><b>Charred carrots</b><p>Labneh, pistachio dukkah, green herbs</p></div><strong>$16</strong></div>
+            <div class="menu-item"><div><b>Burrata & stone fruit</b><p>Basil, grilled bread, aged balsamic</p></div><strong>$18</strong></div>
+            <div class="menu-item"><div><b>Crispy potatoes</b><p>Rosemary salt, smoked garlic aioli</p></div><strong>$12</strong></div>
+            <div class="menu-item"><div><b>Whipped feta & olives</b><p>Warm flatbread, chili honey</p></div><strong>$14</strong></div>
+          </article>
+          <article class="menu-category"><h4>Salads & sides</h4>
+            <div class="menu-item"><div><b>Market greens</b><p>Shaved vegetables, herbs, lemon vinaigrette</p></div><strong>$15</strong></div>
+            <div class="menu-item"><div><b>Roasted cauliflower</b><p>Tahini, pomegranate, toasted seeds</p></div><strong>$16</strong></div>
+            <div class="menu-item"><div><b>Smashed cucumbers</b><p>Sesame, rice vinegar, fresh dill</p></div><strong>$13</strong></div>
+          </article>
+          <article class="menu-category"><h4>Mains</h4>
+            <div class="menu-item"><div><b>Wood-fired chicken</b><p>Lemon, rosemary, crispy potatoes, pan jus · for two</p></div><strong>$38</strong></div>
+            <div class="menu-item"><div><b>Pan-roasted salmon</b><p>Spring greens, sweet pea, lemon butter</p></div><strong>$29</strong></div>
+            <div class="menu-item"><div><b>Wild mushroom tagliatelle</b><p>Parmesan, thyme, black pepper</p></div><strong>$25</strong></div>
+            <div class="menu-item"><div><b>Market vegetable plate</b><p>Grains, whipped feta, herbs, toasted seeds</p></div><strong>$23</strong></div>
+            <div class="menu-item"><div><b>Wood-fired steak frites</b><p>Herb butter, crisp fries, watercress</p></div><strong>$34</strong></div>
+          </article>
+          <article class="menu-category"><h4>Something sweet</h4>
+            <div class="menu-item"><div><b>Olive oil cake</b><p>Roasted stone fruit, crème fraîche</p></div><strong>$12</strong></div>
+            <div class="menu-item"><div><b>Dark chocolate pot</b><p>Sea salt, hazelnut, softly whipped cream</p></div><strong>$11</strong></div>
+            <div class="menu-item"><div><b>Seasonal sorbet</b><p>Ask us what’s fresh today</p></div><strong>$9</strong></div>
+          </article>
+        </div>
+      </section>
+      <section class="menu-group drinks-group" id="drinks" aria-labelledby="drinks-title">
+        <div class="menu-group-head"><div><span class="dashboard-kicker">FROM THE BAR</span><h3 id="drinks-title">Drinks</h3></div><span>POURED WITH CARE</span></div>
+        <div class="menu-category-grid">
+          <article class="menu-category"><h4>Cocktails</h4>
+            <div class="menu-item"><div><b>Juniper spritz</b><p>Gin, elderflower, bubbles, citrus</p></div><strong>$15</strong></div>
+            <div class="menu-item"><div><b>Smoked pear old fashioned</b><p>Bourbon, pear, bitters, a little smoke</p></div><strong>$17</strong></div>
+            <div class="menu-item"><div><b>Garden gin & tonic</b><p>House gin, seasonal herbs, tonic</p></div><strong>$16</strong></div>
+            <div class="menu-item"><div><b>Blood orange margarita</b><p>Tequila, orange, lime, a hint of spice</p></div><strong>$16</strong></div>
+          </article>
+          <article class="menu-category"><h4>Wine & beer</h4>
+            <div class="menu-item"><div><b>House red or white</b><p>Ask us what’s pouring by the glass</p></div><strong>$14</strong></div>
+            <div class="menu-item"><div><b>Local pale ale</b><p>Bright, easy drinking, from our neighbors</p></div><strong>$9</strong></div>
+            <div class="menu-item"><div><b>Something sparkling</b><p>Celebration-worthy, glass or bottle</p></div><strong>$16</strong></div>
+            <div class="menu-item"><div><b>Amber lager</b><p>Easygoing malt, crisp finish</p></div><strong>$9</strong></div>
+          </article>
+          <article class="menu-category"><h4>Zero proof</h4>
+            <div class="menu-item"><div><b>Rosemary lemonade</b><p>Fresh lemon, garden rosemary, a little fizz</p></div><strong>$8</strong></div>
+            <div class="menu-item"><div><b>Citrus & juniper soda</b><p>Orange, lime, juniper, sparkling water</p></div><strong>$8</strong></div>
+            <div class="menu-item"><div><b>Ginger pear fizz</b><p>Fresh pear, ginger, lime, soda</p></div><strong>$9</strong></div>
+          </article>
+          <article class="menu-category"><h4>Coffee & tea</h4>
+            <div class="menu-item"><div><b>Espresso</b><p>Single or double shot</p></div><strong>$4</strong></div>
+            <div class="menu-item"><div><b>House cappuccino</b><p>Rich espresso, silky steamed milk</p></div><strong>$6</strong></div>
+            <div class="menu-item"><div><b>Loose-leaf tea</b><p>Ask about today’s selection</p></div><strong>$5</strong></div>
+          </article>
+        </div>
+      </section>
+      <p class="menu-note">Our menu follows the season. Please let us know about allergies when you book.</p>
+    </section>
+        </main>
+  <footer class="dashboard-footer"><a class="footer-brand" href="index.html#home">J<span>&</span>S</a><span>MADE WITH CARE, SERVED WITH HEART.</span><a href="#top" class="back-top">BACK TO TOP ↑</a></footer>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+

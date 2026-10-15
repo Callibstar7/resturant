@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f4ed">
+  <meta name="description" content="Log in to Juniper & Stone to continue with your reservation.">
+  <title>Log in — Juniper & Stone</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="login-page">
+  <header class="login-topbar">
+    <a class="wordmark" href="index.html#home" aria-label="Juniper and Stone home"><span class="mark">J<span>&</span>S</span><span class="wordmark-name">JUNIPER <i>&</i> STONE</span></a>
+    <a class="login-back" href="index.html#home"><span aria-hidden="true">←</span> Back to restaurant</a>
+  </header>
+  <main class="login-layout">
+    <section class="login-story" aria-label="Welcome to Juniper and Stone">
+      <div class="login-story-image" role="img" aria-label="A warmly lit table set for dinner"></div>
+      <div class="login-story-shade"></div>
+      <div class="login-story-content">
+        <span class="login-kicker"><i></i> YOUR NEIGHBORHOOD TABLE</span>
+        <h1>Good food.<br><em>Good company.</em></h1>
+        <p>Come for a bite, stay for the whole evening. We saved you a seat.</p>
+        <span class="login-story-foot">SEASONAL PLATES&nbsp; · &nbsp;OPEN FIRE&nbsp; · &nbsp;ROOM FOR ONE MORE</span>
+      </div>
+      <span class="login-story-number">J <i>&</i> S &nbsp;·&nbsp; EST. 2024</span>
+    </section>
+    <section class="login-side" aria-labelledby="login-title">
+      <div class="login-content">
+        <span class="login-welcome">WELCOME BACK</span>
+        <h2 id="login-title">Log in</h2>
+        <p class="login-subtitle">It’s lovely to have you back at the table.</p>
+        <form class="login-form" data-demo-login>
+          <label>Email address<input type="email" name="email" autocomplete="email" placeholder="you@example.com" required></label>
+          <label>Password<input type="password" name="password" autocomplete="current-password" placeholder="Your password" required></label>
+          <a class="forgot-password" href="forgot-password.html">Forgot password?</a>
+          <button class="login-submit" type="submit">Log in <span aria-hidden="true">↗</span></button>
+          <p class="form-message" aria-live="polite"></p>
+        </form>
+        <div class="login-divider"><span>OR CONTINUE WITH</span></div>
+        <div class="login-socials">
+          <button class="login-social" type="button" data-provider="Google"><span class="login-social-icon google-symbol">G</span>Google</button>
+          <button class="login-social" type="button" data-provider="Apple"><span class="login-social-icon apple-symbol">A</span>Apple</button>
+          <button class="login-social" type="button" data-provider="Facebook"><span class="login-social-icon facebook-symbol">f</span>Facebook</button>
+        </div>
+        <p class="provider-message login-provider-message" aria-live="polite"></p>
+        <p class="login-switch">New to Juniper & Stone? <a href="signup.html">Create an account <span>↗</span></a></p>
+        <a class="login-home-link" href="index.html#home">Take me back to the restaurant</a>
+      </div>
+    </section>
+  </main>
+  <footer class="login-footer"><span>MADE WITH CARE, SERVED WITH HEART.</span><span>© 2026 JUNIPER & STONE</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
