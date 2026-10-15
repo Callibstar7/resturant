@@ -48,7 +48,8 @@ document.querySelectorAll('[data-reset-form]').forEach((form) => {
 document.querySelectorAll('[data-demo-login]').forEach((form) => {
   form.addEventListener('submit', (event) => {
     event.preventDefault();
-    window.location.href = 'dashboard.html';
+    try { sessionStorage.setItem('juniper-demo-authenticated', 'yes'); } catch {}
+    window.location.href = 'dashboard.html?previewAuth=1';
   });
 });
 
@@ -64,4 +65,28 @@ document.querySelectorAll('[data-reservation-form]').forEach((form) => {
     form.querySelector('.reservation-feedback').textContent = 'Your table request is ready to connect. A booking service is needed to send it to the restaurant.';
   });
 });
+
+
+document.querySelectorAll('[data-demo-signout]').forEach((link) => {
+  link.addEventListener('click', (event) => {
+    event.preventDefault();
+    try { sessionStorage.removeItem('juniper-demo-authenticated'); } catch {}
+    window.location.href = link.href;
+  });
+});
+
+const reservationAccess = document.querySelector('#reservation-access');
+const reservationGate = document.querySelector('#reservation-gate');
+if (reservationAccess && reservationGate) {
+  let isSignedIn = false;
+  try { isSignedIn = sessionStorage.getItem('juniper-demo-authenticated') === 'yes'; } catch {}
+  const previewAuth = new URLSearchParams(window.location.search).get('previewAuth') === '1';
+  if (previewAuth) {
+    isSignedIn = true;
+    try { sessionStorage.setItem('juniper-demo-authenticated', 'yes'); } catch {}
+    try { window.history.replaceState(null, '', window.location.pathname + window.location.hash); } catch {}
+  }
+  reservationAccess.hidden = !isSignedIn;
+  reservationGate.hidden = isSignedIn;
+}
 

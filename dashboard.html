@@ -14,7 +14,7 @@
 <body class="dashboard-page">
   <header class="dashboard-topbar">
     <a class="wordmark" href="index.html#home" aria-label="Juniper and Stone home"><span class="mark">J<span>&</span>S</span><span class="wordmark-name">JUNIPER <i>&</i> STONE</span></a>
-    <nav class="dashboard-nav" aria-label="Account navigation"><a href="#menu">Menu</a><a href="#reserve">Reserve</a><a href="account.html" class="dashboard-signout">Sign out</a></nav>
+    <nav class="dashboard-nav" aria-label="Account navigation"><a href="#menu">Menu</a><a href="#reserve">Reserve</a><a href="account.html" class="dashboard-signout" data-demo-signout>Sign out</a></nav>
   </header>
   <main>
     <section class="dashboard-hero">
@@ -24,6 +24,13 @@
     </section>
 
     <section class="dashboard-booking" id="reserve">
+      <div class="reservation-gate" id="reservation-gate">
+        <span class="dashboard-kicker">A TABLE WITH YOUR NAME ON IT</span>
+        <h2>Sign in to reserve</h2>
+        <p>Log in first to plan your visit and request a table.</p>
+        <a class="reservation-gate-button" href="account.html">Go to sign in <span>↗</span></a>
+      </div>
+      <div class="reservation-access" id="reservation-access" hidden>
       <div class="dashboard-section-head"><div><span class="dashboard-kicker">MAKE AN EVENING OF IT</span><h2>Reserve a table</h2><p>Tell us when you’re coming and who’s joining you.</p></div><span class="booking-mark">01 <i>—</i> 03</span></div>
       <div class="booking-steps"><span class="step-active"><i>1</i> Your table</span><span><i>2</i> Date & time</span><span><i>3</i> Your details</span></div>
       <form class="reservation-form" data-reservation-form>
@@ -40,6 +47,8 @@
         <div class="reservation-submit-row"><p>For parties of 7 or more, please call <a href="tel:+15550142024">(555) 014-2024</a>.</p><button type="submit" class="reservation-submit">Request a table <span>↗</span></button></div>
         <p class="reservation-feedback" aria-live="polite"></p>
       </form>
+    
+      </div>
     </section>
 
     <section class="dashboard-menu" id="menu">
@@ -108,6 +117,7 @@
   <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
